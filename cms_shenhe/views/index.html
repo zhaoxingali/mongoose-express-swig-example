@@ -1,0 +1,45 @@
+{% extends './defaultLayout/main.html' %}
+{% block content %}
+<h1>welcome to cms</h1>
+<div id ="content">
+	<form action="/shenhe" method="post">
+		<label for="">
+			用户名：<input id="username" name='usename' value="{{user}}" readonly="readonly" />
+		</label>
+		<label for="">
+			真实姓名:<input id="truename" name="truename" value="{{name}}" readonly="readonly" />
+		</label>
+		<button type="submit" id="yesBtn">通过</button>
+	</form>
+	
+</div>
+<script>
+	// window.onload=function(){
+	// 	var yesBtn = document.getElementById('yesBtn');
+	// 	var username = document.getElementById('username').value;
+	// 	console.log(username);
+	// 	var truename =document.getElementById('truename').value;
+	// 	var postajax = function(){
+	// 			$.ajax({
+	// 			url:"/shenhe",
+	// 			data:{
+	// 				TrueName:truename,
+	// 				Usernae:username
+	// 			},
+	// 			contentType: "application/json",
+	// 			type:"POST",
+	// 			datatype:"json",
+	// 			success:function(data){
+	// 				if (data.message) {
+	// 					alert('审核通过');
+	// 				};
+	// 			},
+	// 			error:function(error){
+	// 				alert(error);
+	// 			},
+	// 		});
+	// 	};
+	// 	yesBtn.addEventListener('click',postajax,true);
+	// }
+// </script>
+{% endblock %}
